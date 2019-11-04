@@ -3,8 +3,35 @@ package main;
 public class FileDemo {
 
 	public static void main(String[] args) {
-
-
+		//Fileクラスの静的クラス変数
+		//パス区切り記号→；
+		String separator = File.pathSeparator;
+		
+		//パス区切り記号→\
+		separetor1 = Fiel.separator;
+		
+		function();
+		function1();
+		function2();
 	}
-
+	/**
+	* File(String pathname)
+	*パス出力
+	/
+	public static void function(){
+		File file = new File("d:\\eclipse");
+		System.out.println(file);
+	}
+	//File(File parent,String child)
+	public static void function1(){
+		File file = new File("d:","eclipse");
+		System.out.println(file);		
+	}
+	//File(File parent,String child)
+	//parentはFileクラスのメソッドを呼び出し可能
+	public static void function2(){
+		File parent = new File("d:");
+		File file = new File(parent,"eclise");
+		System.out.println(file);		
+	}
 }
